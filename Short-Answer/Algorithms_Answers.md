@@ -2,13 +2,13 @@
 
 ## Exercise I
 
-a)
+a)o(n) because the run time will become slower as bigger inputs are placed into the snippit, the growth is linear 
 
 
-b)
+b) o(n^2) because the growth is exponential due to the loops. 
 
 
-c)
+c)o(n) because the function is called recursively n times before reaching the base case
 
 ## Exercise II
 

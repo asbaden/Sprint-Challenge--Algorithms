@@ -98,35 +98,35 @@ class SortingRobot:
         """
    
         #check the position that the robot is at the list
-        # while light is off:
-        # set light to on
-        # Pick up item with swap 
-        # move right
-        # compare the item and if held item is greater: swap item
-            # move to the left and swap item 
-        # if the item is the same value
-            #move left and swap the item 
-        # move to the right and check if move right is true
-            # if true repeat compare sequence 
-            # if false turn the light  on 
-        print(self.light_is_on())
-        self.set_light_off()
+        # while light is on:
+        #swap initial item
         
-        while self.light_is_on() == False:
-            self.set_light_on 
-            if self.can_move_right() == True:
-                self.swap_item()
+        # check if you can move right, if true:
+        # swap item
+        # turn light on to exit the loop
+        # move right
+        # check if robot can move left where value is none 
+        # move left 
+        # swap item and move right 
+        
+    
+        self.set_light_on()
+        while self.light_is_on() == True:
+            self.set_light_off()
+            self.swap_item()
+            while self.can_move_right():
                 self.move_right()
-                if self.compare_item() == 1:
+                if self.compare_item() == 1: # if held item is greater than
                     self.swap_item()
-                    self.move_left()
-                    self.swap_item()
-                    
-                elif self.compare_item() == 0:
-                    self.move_left()
-                    self.swap_item()
-            else:
-                self.set_light_on()
+                    self.set_light_on()
+                
+    
+            while self.can_move_left and self.compare_item() != None:
+                self.move_left()
+            
+            self.swap_item()
+            self.move_right()
+              
 
         
 
